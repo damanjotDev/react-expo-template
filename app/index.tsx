@@ -1,3 +1,5 @@
+import CustomButton from "@/components/ui/CustomButton";
+import InputField from "@/components/ui/InputField";
 import { Model } from "@/components/ui/model";
 import { UserActions } from "@/reducers";
 import { useAppDispatch, useTypedSelector } from "@/srore";
@@ -10,14 +12,39 @@ export default function Index() {
   console.log(isModel, error)
   return (
     <View className="flex-1 items-center justify-center">
-      <Text onPress={() => dispatch(UserActions.setModel({}))} className="py-5 px-10 shadow-lg bg-white rounded-full">Open Model</Text>
-      <Model open={false} animationType="fade" transparent={true} setValue={()=> dispatch(UserActions.setModel({}))} className="flex-1 flex-col justify-center items-center px-4">
-  
-          <View className="w-full h-96 bg-yellow-500 rounded-2xl">
-            {/* Modal content here */}
-          </View>
-        
-      </Model>
+
+
+      <View className="w-full p-5">
+        <InputField
+          label="Name"
+          placeholder="Enter name"
+          // icon={icons.person}
+          // value={''}
+          onChangeText={(value) => { }}
+        />
+
+        <InputField
+          label="Name"
+          placeholder="Enter name"
+          // icon={icons.person}
+          // value={''}
+          onChangeText={(value) => { }}
+        />
+
+        <InputField
+          label="Name"
+          placeholder="Enter name"
+          // icon={icons.person}
+          // value={''}
+          onChangeText={(value) => { }}
+        />
+
+        <CustomButton
+          title="Sign Up"
+          onPress={() => { }}
+          className="mt-6"
+        />
+      </View>
     </View>
   );
 }
