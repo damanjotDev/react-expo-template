@@ -50,11 +50,11 @@ const Select: React.FC<FullScreenSelectProps> = ({
 
             <TouchableOpacity
                 onPress={() => setOpen(true)}
-                className={`h-11 px-3 py-2 border rounded-md flex-row items-center justify-between bg-white ${error ? "border-red-500" : "border-gray-300"
+                className={`h-[50] px-5 py-2 border rounded-md flex-row items-center justify-between bg-white ${error ? "border-red-500" : "border-gray-300"
                     }`}
             >
                 <Text
-                    className={`text-sm ${value ? "text-gray-900" : "text-gray-400"
+                    className={`text-[15px] ${value ? "text-gray-900" : "text-gray-400"
                         }`}
                 >
                     {value || placeholder}
@@ -104,11 +104,11 @@ const Select: React.FC<FullScreenSelectProps> = ({
                                         setOpen(false)
                                         setSearchText("")
                                     }}
-                                    className={`flex-row items-center px-6 py-4 ${selected ? "bg-gray-100" : ""
+                                    className={`flex-row items-center gap-2 px-6 py-4 ${selected ? "bg-gray-100" : ""
                                         }`}
                                 >
                                     {selected && (
-                                        <Check size={18} color="#4b5563" className="mr-2" />
+                                        <Check size={18} color="#4b5563" />
                                     )}
                                     <Text className="text-base text-gray-800">{item}</Text>
                                 </TouchableOpacity>
